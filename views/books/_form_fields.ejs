@@ -6,7 +6,7 @@
     <label>Author</label>
     <select name="author">
     <% authors.forEach(author => { %>
-        <% if( author.id === book.author) { %>
+        <% if( author.id == book.author) { %>
             <option selected label="<%= author.name %>" value="<%= author.id %>">
         <% } else { %>  
             <option label="<%= author.name %>" value="<%= author.id %>">
@@ -19,7 +19,7 @@
         type="date" 
         name="publishDate" 
         value="<%= book.publishDate == null ? '' : 
-            book.publishDate.toISOString().split('T')[0] %> ">
+            book.publishDate.toISOString().split('T')[0] %>">
 </div>
 <div>
     <label>Page count</label>
@@ -27,7 +27,7 @@
         type="number" 
         name="pageCount" 
         min = "1"
-        value=" <%= book.pageCount %>">
+        value="<%= book.pageCount %>">
 </div>
 <div>
     <label>Cover</label>
