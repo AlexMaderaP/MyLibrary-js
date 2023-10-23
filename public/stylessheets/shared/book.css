@@ -1,0 +1,27 @@
+:root {
+    --book-cover-witdth: 200px;
+    --book-cover-witdth-large: 325px;
+    --book-cover-aspect-ratio: 0.75;
+}
+
+.book-cover{
+    width: var(--book-cover-witdth);
+    height: calc(var(--book-cover-witdth) / var(--book-cover-aspect-ratio));
+}
+
+.book-cover-large{
+    width: var(--book-cover-witdth-large);
+    height: calc(var(--book-cover-witdth-large) / var(--book-cover-aspect-ratio));
+}
+
+.book-grid{
+    display: grid;
+    justify-content: center;
+    grid-gap: 2rem;
+    grid-template-columns: repeat(auto-fill, var(--book-cover-witdth));
+}
+
+.book-grid-large{
+    grid-template-columns: repeat(auto-fill, var(--book-cover-witdth-large));
+}
+
